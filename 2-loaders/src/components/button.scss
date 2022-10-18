@@ -1,0 +1,17 @@
+$bgColor: #000000;
+$color: #fefefe;
+$upper: uppercase;
+$border: 1px solid red;
+$borderRadius: 10px;
+$cursor: pointer;
+
+body {
+  .btn {
+    background-color: $bgColor;
+    text-transform: $upper;
+    color: $color;
+    border: $border;
+    border-radius: $borderRadius;
+    cursor: $cursor;
+  }
+}
