@@ -2,6 +2,8 @@ import Title from './components/title.js';
 import Image from './components/img.js';
 import Button from './components/button.js';
 import Warning from './templates/warning.html';
+import Txt from './files/texto.txt';
+import Descricao from './files/descricao.json';
 
 const title = new Title();
 title.create("Primeira página");
@@ -23,3 +25,11 @@ console.log(teste);
 // html
 const body = document.querySelector('body');
 body.innerHTML += Warning;
+
+// import arquivo texto
+const text = Txt;
+console.log(text);
+
+// import arquivo json
+const desc = Descricao;
+console.log(desc);
