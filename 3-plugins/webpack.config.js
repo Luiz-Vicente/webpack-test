@@ -9,7 +9,7 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: '[name]-[contenthash].js'
   },
   mode: 'development',
   optimization: {
@@ -28,7 +28,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'style.css'
+      filename: '[name]-[contenthash].css'
     }),
     new webpack.DefinePlugin({
       VERSION: JSON.stringify('1.0.0'),
