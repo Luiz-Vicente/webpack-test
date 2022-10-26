@@ -1,6 +1,7 @@
 const path = require('path'); // biblioteca do node.js
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const TerserPlugin = require('terser-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
   entry: './src/index.js',
@@ -26,6 +27,10 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin({
       filename: 'style.css'
-    })
+    }),
+    new webpack.DefinePlugin({
+      VERSION: JSON.stringify('1.0.0'),
+      PORT: JSON.stringify('8080'),
+    }),
   ]
 }
