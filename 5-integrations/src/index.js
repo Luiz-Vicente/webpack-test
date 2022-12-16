@@ -1,11 +1,22 @@
+// import Bootstrap
+import "bootstrap";
+
 // import CSS
-import './fonts.css';
+import "./fonts.css";
+import "./index.scss";
 
 // import jQuery
-import $ from 'jquery';
+import $ from "jquery";
 
-const body = $('body');
+// import fontawesome
+import { library, dom } from "@fortawesome/fontawesome-svg-core";
+import { faBacon } from "@fortawesome/free-solid-svg-icons";
 
-const p = $('<p></p>').text('Texto muito louco').css('color','red');
+library.add(faBacon);
+dom.watch();
 
-body.append(p)
+const body = $("body");
+
+const p = $("<p></p>").text("Texto muito louco").css("color", "red");
+
+body.append(p);
