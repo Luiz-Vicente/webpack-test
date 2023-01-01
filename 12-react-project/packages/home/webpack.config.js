@@ -9,7 +9,7 @@ module.exports = {
     path: path.resolve(__dirname, "./dist"),
     publicPath: "http://localhost:9002/",
   },
-  mode: 'development',
+  mode: "development",
   devServer: {
     port: 9002,
     historyApiFallback: true,
@@ -37,6 +37,13 @@ module.exports = {
       filename: "index.html",
       template: "./public/index.html",
       title: "app",
+    }),
+    new ModuleFederationPlugin({
+      name: "HomeApp",
+      filename: "remoteEntry.js",
+      exposes: {
+        "./HomePage": "./src/Home",
+      },
     }),
   ],
 };
